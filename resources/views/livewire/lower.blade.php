@@ -2,10 +2,10 @@
 
 use function Livewire\Volt\{state, mount};
 
-state(['word', 'word_upper']);
+state(['word', 'word_lower']);
 
 mount(function () {
-    $this->word_upper = strtolower($this->word);
+    $this->word_lower = strtolower($this->word);
 });
 
 ?>
@@ -17,6 +17,6 @@ mount(function () {
     </p>
     <h1>小文字に変換</h1>
     <p>
-        {{ $word_upper }}
+        {{ $word_lower }}
     </p>
 </div>
