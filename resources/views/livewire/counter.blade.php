@@ -10,23 +10,21 @@ state([
 $increment = function () {
     $this->count++;
 
-    $label = $this->count;
-
     if ($this->count % 3 === 0 && $this->count % 5 === 0) {
-        $label = 'FizzBuzz';
+        $this->label = 'FizzBuzz';
     } elseif ($this->count % 3 === 0) {
-        $label = 'Fizz';
+        $this->label = 'Fizz';
     } elseif ($this->count % 5 === 0) {
-        $label = 'Buzz';
+        $this->label = 'Buzz';
+    } else {
+        $this->label = $this->count;
     }
-
-    $this->label = $label;
 };
 
 ?>
 
 <div>
-    <h1>カウンター</h1>
+    <h1>FizzBuzz</h1>
     <div>
         Count:
         {{ $label }}
