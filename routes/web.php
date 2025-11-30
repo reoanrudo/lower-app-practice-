@@ -7,4 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Volt::route('/counter', 'counter');
+
 Volt::route('/lower/{word}', 'lower');
+
